@@ -51,7 +51,7 @@ router.get('/get/:id', (req, res) => {
 // Obtener un usuario
 router.get('/:id', (req, res) => {
   const { id } = req.params; 
-  mysqlConnection.query('SELECT * FROM usuarios WHERE idUsuario = ?', [id], (err, rows, fields) => {
+  mysqlConnection.query('SELECT * FROM recompensas WHERE idRecompensa = ?', [id], (err, rows, fields) => {
     if (!err) {
       if(rows!=''){
         res.json(rows[0]);  
